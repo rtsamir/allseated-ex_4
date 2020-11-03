@@ -16,3 +16,6 @@ class Elephant {
 new Elephant(5, 10, 780);
 new Elephant(200, 280, 660);
 new Elephant(260, 10, 660);
+
+let aData = [{"locX":220,"locY":40,"type":"elephant","weight":660},{"locX":20,"locY":240,"type":"rabbit","speed":44},{"locX":410,"locY":40,"type":"penguin","swimmingSpeed":660},{"locX":20,"locY":440,"type":"elephant","weight":660},{"locX":20,"locY":440,"type":"penguin","swimmingSpeed":660}];
+console.log(aData);
