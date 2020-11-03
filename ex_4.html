@@ -1,0 +1,29 @@
+﻿ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_4</title>
+</head>
+<body>
+    <script>
+        class Elephant {
+            constructor(pX, pY, pWeight ) {
+                let aDiv = document.createElement("div");
+                aDiv.style.position = "fixed";
+                aDiv.style.top = pX + "px";
+                aDiv.style.left = pY + "px";
+                let atext = document.createElement("p");
+                atext.innerHTML = "The Elephant Weight is:" + pWeight + "kg";
+                let aImage = document.createElement("img");
+                aImage.src = "./images/img01.jpg";
+                aDiv.appendChild(aImage);
+                aDiv.appendChild(atext);
+                document.body.appendChild(aDiv);
+            }
+        }
+        new Elephant(5, 0, 780);
+        new Elephant(200, 260, 660);
+    </script>
+</body>
+</html>
