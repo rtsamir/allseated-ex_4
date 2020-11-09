@@ -1,21 +1,33 @@
 class Elephant {
-	constructor(pX, pY, pWeight ) {
-		let aDiv = document.createElement("div");
-        aDiv.style.position = "fixed";
-        aDiv.style.top = pX + "px";
-        aDiv.style.left = pY + "px";
+
+
+    constructor(pWeight) {
+        this.weight = pWeight;
+        this.createElement();
+    }
+    //___________________________________________________
+
+    createElement() {
+        this.element = document.createElement("div");
         let atext = document.createElement("p");
-        atext.innerHTML = "The Elephant Weight is:" + pWeight + "kg";
+        atext.innerHTML = "The Elephant Weight is:" + this.weight + "kg";
         let aImage = document.createElement("img");
         aImage.src = "./images/img01.jpg";
-        aDiv.appendChild(aImage);
-        aDiv.appendChild(atext);
-        document.body.appendChild(aDiv);
-	}
+        this.element.appendChild(aImage);
+        this.element.appendChild(atext);
+        return this.element;
+    }
 }
-new Elephant(5, 10, 780);
-new Elephant(200, 280, 660);
-new Elephant(260, 10, 660);
+//_____________________________________________________________________
 
-let aData = [{"locX":220,"locY":40,"type":"elephant","weight":660},{"locX":20,"locY":240,"type":"rabbit","speed":44},{"locX":410,"locY":40,"type":"penguin","swimmingSpeed":660},{"locX":20,"locY":440,"type":"elephant","weight":660},{"locX":20,"locY":440,"type":"penguin","swimmingSpeed":660}];
-console.log(aData);
+let aList = document.getElementById("Animals_div");
+
+let aAnimal1 = new Elephant(780);
+let aAnimal2 = new Elephant(650);
+let aAnimal3 = new Elephant(300);
+let aAnimal4 = new Elephant(500);
+
+aList.appendChild(aAnimal1.element);
+aList.appendChild(aAnimal2.element);
+aList.appendChild(aAnimal3.element);
+aList.appendChild(aAnimal4.element);
