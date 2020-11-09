@@ -31,3 +31,6 @@ aList.appendChild(aAnimal1.element);
 aList.appendChild(aAnimal2.element);
 aList.appendChild(aAnimal3.element);
 aList.appendChild(aAnimal4.element);
+
+
+let aData = [{ "type": "elephant", "weight": 660 }, {"type": "rabbit", "speed": 44 }, { "type": "penguin", "swimmingSpeed": 750 }, {"type": "elephant", "weight": 600 }, {"type": "penguin", "swimmingSpeed": 60 }];
